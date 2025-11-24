@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chalets et montagne - Réservation</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <main>
-            <form action ="#" method="post">
-                <input type="text" name="nom" placeholder="nom" required>
-                <input type="email" name="email" placeholder="email" required>
-                <select></select>
-            </form>
-        </main>
+      <main>
+        <form action="#" method="post">
+          <input type="text" name="nom" placeholder="nom" required />
+          <input type="email" name="email" placeholder="email" required />
+          <select name="chalets souhaités">
+            <option value="">--Choisir une option--</option>
+            <option value="panorama">Chalet panorama</option>
+            <option value="forêt">Chalet forêt</option>
+            <option value="neiges">Chalet neiges eternelles</option>
+            <input type="date" name="date" value="" min="25/11/2025" required />
+            <input type="date" name="date" value="" max="31/12/2025" required />
+          <input type="email" name="email" placeholder="email" required />
+          </select>
+        </form>
+      </main>
     </header>
-</body>
+  </body>
 </html>
