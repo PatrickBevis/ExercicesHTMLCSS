@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Chalet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
   </head>
-  <body>
+  <body class="bg-primary text-white">
     <header>
-      <h1>chalet-panorama</h1>
+      <h1 class="bg-danger p-5 d-flex justify-content-center">
+        chalet-panorama
+      </h1>
     </header>
-    <main>
+    <main class="my-5 ms-5">
       <article>
         <header>
-          <h2>
-            Vue imprenable sur la vallée<time datetime="24/11/25">
-              24/11/2025
-            </time>
-          </h2>
+          <h2>Vue imprenable sur la vallée</h2>
         </header>
         <section>
-          <h3>Description</h3>
-          <p>p1</p>
+          <h3>Description:</h3>
         </section>
-        <figure>
-          <img src="../images/images.webp" alt="Un sacré chalet" />
-          <figcaption>Un très beau chalet</figcaption>
+        <figure class="d-flex row justify-content-center">
+          <img
+            src="../images/images.webp"
+            alt="Un sacré chalet"
+            class="img-fluid"
+            style="height:auto; width:25%;"
+          />
+          <figcaption class="d-flex justify-content-center">Un très beau chalet</figcaption>
         </figure>
         <section>
           <h3>Equipements</h3>
-          <p>p2</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus autem cumque perferendis eligendi ex, cum, saepe hic aliquam, consectetur vero quaerat itaque. Numquam temporibus sint vitae labore dolores ratione nemo.</p>
         </section>
-        <footer>Capacité: 6 personnes - A partir de 1200€ /semaine</footer>
+        <footer>Capacité: 2 personnes - A partir de 1500€/semaine</footer>
       </article>
     </main>
+    <footer class="bg-warning d-flex justify-content-center ">© 2025 Chalets & Montagne</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

@@ -1,28 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chalets et montagne - Réservation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
   </head>
-  <body>
+  <body class="bg-danger text-white">
     <header>
       <main>
-        <form action="#" method="post">
-          <input type="text" name="nom" placeholder="nom" required />
-          <input type="email" name="email" placeholder="email" required />
-          <select name="chalets souhaités">
-            <option value="">--Choisir un chalet--</option>
-            <option value="panorama">Chalet panorama</option>
-            <option value="forêt">Chalet forêt</option>
-            <option value="neiges">Chalet neiges eternelles</option>
-            <input type="date" name="date" value="" min="25/11/2025" required />
-            <input type="date" name="date" value="" max="31/12/2025" required />
-          <input type="number" name="personnes" min="2" max="20"/>
-          <textarea></textarea>
-          <button type="submit">Envoyer la demande</button>
-          </select>
-        </form>
+        <div class="container mt-5">
+          <h2 class="mb-4">Réserver</h2>
+
+          <form>
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nom"
+                placeholder="Votre nom"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class>
+              <label for="option" class="form-label">Options:</label>
+              <select name="chalets souhaités">
+                <option value="">--Choisir un chalet--</option>
+                <option value="panorama">Chalet panorama</option>
+                <option value="forêt">Chalet forêt</option>
+                <option value="neiges">Chalet neiges eternelles</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="dateDebut" class="form-label">Date de début</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="dateDebut"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="dateFin" class="form-label">Date de fin</label>
+                <input type="date" class="form-control" id="dateFin" required />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="nbPersonnes" class="form-label"
+                >Nombre de personnes</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="nbPersonnes"
+                min="1"
+                max="20"
+                value="1"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn btn-warning">Envoyer</button>
+          </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       </main>
     </header>
   </body>
