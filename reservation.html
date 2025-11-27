@@ -9,82 +9,185 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     />
   </head>
-  <body class="bg-danger text-white">
+
+  <body class="d-flex flex-column min-vh-100">
     <header>
-      <main>
-        <div class="container mt-5">
-          <h2 class="mb-4">Réserver</h2>
+      <nav class="navbar navbar-expand-lg navbar-dark py-5 bg-info">
+        <div class="container">
+          <a class="navbar-brand" href="#">Chalets & Montagne</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto gap-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link bg-warning p-3 text-dark"
+                  href="../index.html"
+                  >Accueil</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link bg-warning p-3 text-dark"
+                  href="../chalets/chalet-panorama.html"
+                  >Nos chalets</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link bg-warning p-3 text-dark"
+                  href="../reservation.html"
+                  >Réservation</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="d-flex justify-content-center">
+      <div class="container mt-5 d-flex justify-content-center row">
+        <h2 class="mb-4 d-flex justify-content-center">Réserver</h2>
+        <section class="container col-lg-6">
+          <h3>Nous contacter</h3>
+          <p class="mt- d-flex flex-column">
+            <span>Chalet & Montagne</span><span>123 Rue des Sommets</span
+            ><span>74400 Chamonix France</span>
+          </p>
 
-          <form>
-            <div class="mb-3">
-              <label for="nom" class="form-label">Nom</label>
-              <input
-                type="text"
-                class="form-control"
-                id="nom"
-                placeholder="Votre nom"
-                required
-              />
+          <p>
+            Email :
+            <a href="mailto:contact@chaletsmontagne.fr"
+              >contact@chaletsmontagne.fr</a
+            >
+          </p>
+
+          <p>
+            Téléphone :
+            <a href="">+33 6 00 00 00 00</a>
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88794.5435471685!2d6.862615694754586!3d45.93470770022395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47894c062dfe2ee7%3A0x408ab2ae4baa380!2sChamonix-Mont-Blanc!5e0!3m2!1sfr!2sfr!4v1764251077478!5m2!1sfr!2sfr"
+            width="500"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="d-none d-lg-block mt-3 mb-5"
+          ></iframe>
+        </section>
+        <form class="col-lg-6">
+          <h3>Formulaire de réservation</h3>
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nom"
+              placeholder="Nom"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+          <div class="row mb-3">
+            <label for="option" class="form-label">Options</label>
+            <select name="chalets souhaités">
+              <option value="">--Choisir un chalet--</option>
+              <option value="panorama">Chalet panorama</option>
+              <option value="forêt">Chalet forêt</option>
+              <option value="neiges">Chalet neiges eternelles</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="dateDebut" class="form-label">Date de début</label>
+              <input type="date" class="form-control" id="dateDebut" required />
             </div>
 
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="name@example.com"
-                required
-              />
+            <div class="col-md-6 mb-3">
+              <label for="dateFin" class="form-label">Date de fin</label>
+              <input type="date" class="form-control" id="dateFin" required />
             </div>
-            <div class>
-              <label for="option" class="form-label">Options:</label>
-              <select name="chalets souhaités">
-                <option value="">--Choisir un chalet--</option>
-                <option value="panorama">Chalet panorama</option>
-                <option value="forêt">Chalet forêt</option>
-                <option value="neiges">Chalet neiges eternelles</option>
-              </select>
-            </div>
+          </div>
 
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="dateDebut" class="form-label">Date de début</label>
-                <input
-                  type="date"
-                  class="form-control"
-                  id="dateDebut"
-                  required
-                />
-              </div>
+          <div class="mb-3">
+            <label for="nbPersonnes" class="form-label">
+              Nombre de personnes</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="nbPersonnes"
+              min="2"
+              max="10"
+              value="2"
+              required
+            />
+          </div>
 
-              <div class="col-md-6 mb-3">
-                <label for="dateFin" class="form-label">Date de fin</label>
-                <input type="date" class="form-control" id="dateFin" required />
-              </div>
-            </div>
+          <button type="submit" class="btn btn-warning mb-5">Envoyer</button>
+        </form>
+      </div>
+    </main>
+    <footer class="bg-info text-center text-white pt-4 mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5>À propos</h5>
+            <p>Venez visiter nos merveilleux chalets</p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5>Liens utiles</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="../index.html" class="text-white">Accueil</a>
+              </li>
+              <li>
+                <a href="../chalets/chalet-panorama.html" class="text-white"
+                  >Nos chalets</a
+                >
+              </li>
+              <li>
+                <a href="../reservation.html" class="text-white"
+                  >Réservations</a
+                >
+              </li>
+            </ul>
+          </div>
 
-            <div class="mb-3">
-              <label for="nbPersonnes" class="form-label"
-                >Nombre de personnes</label
-              >
-              <input
-                type="number"
-                class="form-control"
-                id="nbPersonnes"
-                min="1"
-                max="20"
-                value="1"
-                required
-              />
-            </div>
-
-            <button type="submit" class="btn btn-warning">Envoyer</button>
-          </form>
+          <div class="col-md-4 mb-3">
+            <h5>Contact</h5>
+            <ul class="list-unstyled">
+              <li>Email : contact@example.com</li>
+              <li>Téléphone : 06 00 00 00 00</li>
+              <li>Adresse : 123 Rue des Sommets, 74400 Chamonix France</li>
+            </ul>
+          </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      </main>
-    </header>
+        <div class="text-center">
+          <p class="mb-0">&copy; 2025 Chalets & Montagne</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
